@@ -1,1 +1,6 @@
+name: "Hello World Action"
+description: "test"
+runs:
+  using: "node12"
+  main: "main.js"
 
