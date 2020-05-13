@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Greet 
     steps:
+      - uses: actions/checkout@v1
       - name: javascript
         uses: ./.github/actions/hello-world
       
