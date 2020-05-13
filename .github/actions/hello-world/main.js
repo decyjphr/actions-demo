@@ -6,7 +6,7 @@ async function run() {
     const token = core.getInput("repo-token");
     const octokit = new github.GitHub(token);
     //const issueComment = octokit.issue({ body: 'Hello World!' })
-    context.github.issues.createComment({ body: 'Hello World!' })
+    const newIssueComment = await octokit.issues.createComment({ body: 'Hello World!' })
   } catch (error) {
     core.setFailed(error.message);
   }
