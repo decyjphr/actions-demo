@@ -8,8 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     name: Greet 
     steps:
-      - name: command
-        run: echo 'Hello World'
+      - name: javascript
+        uses: ./.github/actions/hello-world
       
   
   
