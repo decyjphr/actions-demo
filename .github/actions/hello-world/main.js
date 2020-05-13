@@ -3,7 +3,8 @@ const github = require("@actions/github");
 
 async function run() {
   try {
-    const octokit = new github.GitHub(github.token);
+    const token = core.getInput("repo-token");
+    const octokit = new github.GitHub(token);
     const issueComment = octokit.issue({ body: 'Hello World!' })
     context.github.issues.createComment(issueComment)
   } catch (error) {
